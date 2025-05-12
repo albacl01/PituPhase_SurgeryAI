@@ -29,24 +29,16 @@ This two-step architecture enables label-efficient training for real-world surgi
 ```
 PituPhase_SurgeryAI/
 ├── data_preparation/              # Prepare the dataset
-│   ├── extract_frames.py          # Extract 1 FPS frames from surgical videos
-│   └── convert_labels.py          # Convert .json annotations to .csv
-│   └── create_partitions.py       # Create data splits
+│   ├── extract_frames.ipynb          # Extract 1 FPS frames from surgical videos
+│   └── convert_labels.ipynb          # Convert .json annotations to .csv
+│   └── create_partitions.ipynb       # Create data splits
 │
 ├── SSL_Pretraining/               # Self-supervised training scripts
-│   ├── simclr_pretrain.py         # SimCLR Pretraining
-│   └── byol_pretrain.py           # BYOL Pretraining
+│   ├── simclr_pretrain.ipynb         # SimCLR Pretraining
+│   └── byol_pretrain.ipynb           # BYOL Pretraining
 │
 ├── downstream_evaluation/         # Evaluate representations with a linear classifier
-│   └── evaluate_classifier.py     
-│
-├── notebooks/                     # Interactive visualizations and analyses
-│   └── exploratory.ipynb          # Frame samples, t-SNE plots, metrics, etc.
-│
-│
-├── models/                        # Saved model weights
-│   ├── simclr_model.pt
-│   └── byol_model.pt
+│   └── evaluate_classifier.ipynb     
 │
 ├── utils/                         # Helper modules
 │   ├── metrics.py                 # Precision, recall, F1, confusion matrix
