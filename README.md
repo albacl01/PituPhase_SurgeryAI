@@ -31,7 +31,6 @@ PituPhase_SurgeryAI/
 ├── data_preparation/              # Prepare the dataset
 │   ├── extract_frames.ipynb          # Extract 1 FPS frames from surgical videos
 │   └── convert_labels.ipynb          # Convert .json annotations to .csv
-│   └── create_partitions.ipynb       # Create data splits
 │
 ├── SSL_Pretraining/               # Self-supervised training scripts
 │   ├── simclr_pretrain.ipynb         # SimCLR Pretraining
