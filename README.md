@@ -9,28 +9,42 @@ This repository accompanies the study “Improving Surgical Phase Recognition us
 
 PituPhase_SurgeryAI/
 │
-├── data_preparation/
-│ └── extract_frames.py # Extract frames from videos (1 fps)
+├── data_preparation/                    # Convert raw videos to image frames
+│   └── extract_frames.py                # Extract 1 FPS frames from surgical videos
 │
-├── label_processing/
-│ └── convert_labels.py # Convert JSON annotations to CSV
-│ └── create_partitions.py # Train/val/test splits (patient-wise)
+├── label_processing/                    # Process phase annotations and create data splits
+│   ├── convert_labels.py                # Convert raw .json annotations to .csv
+│   └── create_partitions.py             # Split data into train/val/test (patient-wise)
 │
-├── ssl_pretraining/
-│ ├── simclr_pretrain.py # SimCLR self-supervised training
-│ └── byol_pretrain.py # BYOL self-supervised training
+├── ssl_pretraining/                     # Self-supervised learning models
+│   ├── simclr_pretrain.py               # SimCLR training script
+│   └── byol_pretrain.py                 # BYOL training script
 │
-├── downstream_evaluation/
-│ └── evaluate_classifier.py # Linear classifier evaluation on frozen features
+├── downstream_evaluation/               # Evaluate representations on SPR classification
+│   └── evaluate_classifier.py           # Train/test linear classifier on SSL embeddings
 │
-├── notebooks/
-│ └── exploratory.ipynb # Jupyter notebook for visualization and experiments
+├── notebooks/                           # Interactive exploration and visualizations
+│   └── exploratory.ipynb                # Frame samples, t-SNE plots, metrics, etc.
 │
-└── README.md
+├── data/                                # Expected structure for local dataset
+│   ├── videos/                          # Raw .mp4 or .avi videos (not included)
+│   ├── frames/                          # Extracted images (organized per patient/video)
+│   ├── annotations/                     # .json or .csv files with phase labels
+│   └── splits/                          # CSVs listing filenames for train/val/test
+│
+├── models/                              # Saved model weights or checkpoints (optional)
+│   └── simclr_model.pt
+│   └── byol_model.pt
+│
+├── utils/                               # Helper functions
+│   └── metrics.py                       # Metric functions (e.g., precision, recall, F1)
+│   └── attention_pooling.py             # Shared pooling layer used in both models
+│
+├── requirements.txt                     # Python dependencies
+├── README.md                            # Repository overview and usage
+├── LICENSE                              # Open-source license (e.g., MIT)
+└── .gitignore                           # Common patterns to ignore
 
-yaml
-Copiar
-Editar
 
 ---
 
