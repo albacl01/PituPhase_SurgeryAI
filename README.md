@@ -7,44 +7,7 @@ This repository accompanies the study “Improving Surgical Phase Recognition us
 
 **Repository Structure**
 
-PituPhase_SurgeryAI/
-│
-├── data_preparation/                    # Convert raw videos to image frames
-│   └── extract_frames.py                # Extract 1 FPS frames from surgical videos
-│
-├── label_processing/                    # Process phase annotations and create data splits
-│   ├── convert_labels.py                # Convert raw .json annotations to .csv
-│   └── create_partitions.py             # Split data into train/val/test (patient-wise)
-│
-├── ssl_pretraining/                     # Self-supervised learning models
-│   ├── simclr_pretrain.py               # SimCLR training script
-│   └── byol_pretrain.py                 # BYOL training script
-│
-├── downstream_evaluation/               # Evaluate representations on SPR classification
-│   └── evaluate_classifier.py           # Train/test linear classifier on SSL embeddings
-│
-├── notebooks/                           # Interactive exploration and visualizations
-│   └── exploratory.ipynb                # Frame samples, t-SNE plots, metrics, etc.
-│
-├── data/                                # Expected structure for local dataset
-│   ├── videos/                          # Raw .mp4 or .avi videos (not included)
-│   ├── frames/                          # Extracted images (organized per patient/video)
-│   ├── annotations/                     # .json or .csv files with phase labels
-│   └── splits/                          # CSVs listing filenames for train/val/test
-│
-├── models/                              # Saved model weights or checkpoints (optional)
-│   └── simclr_model.pt
-│   └── byol_model.pt
-│
-├── utils/                               # Helper functions
-│   └── metrics.py                       # Metric functions (e.g., precision, recall, F1)
-│   └── attention_pooling.py             # Shared pooling layer used in both models
-│
-├── requirements.txt                     # Python dependencies
-├── README.md                            # Repository overview and usage
-├── LICENSE                              # Open-source license (e.g., MIT)
-└── .gitignore                           # Common patterns to ignore
-
+<pre> ``` PituPhase_SurgeryAI/ ├── data_preparation/ # Convert raw videos to image frames │ └── extract_frames.py # Extract 1 FPS frames from surgical videos │ ├── label_processing/ # Process phase annotations and create data splits │ ├── convert_labels.py # Convert .json annotations to .csv │ └── create_partitions.py # Train/val/test splits (patient-wise) │ ├── ssl_pretraining/ # Self-supervised training scripts │ ├── simclr_pretrain.py # SimCLR pretraining │ └── byol_pretrain.py # BYOL pretraining │ ├── downstream_evaluation/ # Evaluate representations with a linear classifier │ └── evaluate_classifier.py # Works for both SimCLR and BYOL │ ├── notebooks/ # Interactive visualizations and analyses │ └── exploratory.ipynb # Frame samples, t-SNE plots, metrics, etc. │ ├── data/ # Dataset structure (example) │ ├── videos/ # Raw .mp4 or .avi files (not included) │ ├── frames/ # Extracted images │ ├── annotations/ # .csv or .json with phase labels │ └── splits/ # train/val/test partitions │ ├── models/ # Saved model weights (optional) │ ├── simclr_model.pt │ └── byol_model.pt │ ├── utils/ # Helper modules │ ├── metrics.py # Precision, recall, F1, confusion matrix │ └── attention_pooling.py # Custom pooling layer │ ├── requirements.txt # Python dependencies ├── README.md # Project overview ├── LICENSE # License (MIT recommended) └── .gitignore # Ignore logs, models, etc. ``` </pre>
 
 ---
 
