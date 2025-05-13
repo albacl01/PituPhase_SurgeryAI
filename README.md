@@ -35,10 +35,11 @@ PituPhase_SurgeryAI/
 ├── SSL_Pretraining/               # Self-supervised training scripts
 │   ├── simclr_pretrain.ipynb         # SimCLR Pretraining
 │   └── byol_pretrain.ipynb           # BYOL Pretraining
-│   └── attention_pooling.py       # Attention-weighted pooling operator
+│   └── attention_weighted_pooling.ipynb       # Attention-weighted pooling operator
 │
 ├── downstream_evaluation/         # Evaluate representations with a linear classifier
-│   └── evaluate_classifier.ipynb     
+│   └── evaluate_classifier.ipynb
+│   └── subset_training.ipynb       
 │
 ├── README.md                      # Project overview
 ├── LICENSE                        # License (MIT recommended)
