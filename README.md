@@ -35,15 +35,11 @@ PituPhase_SurgeryAI/
 ├── SSL_Pretraining/               # Self-supervised training scripts
 │   ├── simclr_pretrain.ipynb         # SimCLR Pretraining
 │   └── byol_pretrain.ipynb           # BYOL Pretraining
+│   └── attention_pooling.py       # Attention-weighted pooling operator
 │
 ├── downstream_evaluation/         # Evaluate representations with a linear classifier
 │   └── evaluate_classifier.ipynb     
 │
-├── utils/                         # Helper modules
-│   ├── metrics.py                 # Precision, recall, F1, confusion matrix
-│   └── attention_pooling.py       # Attention-weighted pooling operator
-│
-├── requirements.txt               # Python dependencies
 ├── README.md                      # Project overview
 ├── LICENSE                        # License (MIT recommended)
 └── .gitignore                     # Ignore logs, models, etc.
