@@ -61,7 +61,7 @@ The files have been encrypted to ensure secure handling. Access requires the com
 
 ## Features
 
-- Full preprocessing pipeline: video to frame conversion, label parsing, and stratified data splits
+- Full preprocessing pipeline: video to frame conversion and label parsing
 - SimCLR and BYOL pretraining with ResNet50 backbone
 - Attention-weighted pooling layer integrated into both frameworks
 - Downstream linear evaluation to assess learned representations
