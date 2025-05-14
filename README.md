@@ -35,7 +35,8 @@ PituPhase_SurgeryAI/
 ├── SSL_Pretraining/               # Self-supervised training scripts
 │   ├── simclr_pretrain.ipynb         # SimCLR Pretraining
 │   └── byol_pretrain.ipynb           # BYOL Pretraining
-│   └── attention_weighted_pooling.ipynb       # Attention-weighted pooling operator
+│   └── simclr_attention.ipynb      
+│   └── byol_attention.ipynb     
 │
 ├── downstream_evaluation/         # Evaluate representations with a linear classifier
 │   └── evaluate_classifier.ipynb
