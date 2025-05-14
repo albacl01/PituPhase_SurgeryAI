@@ -11,9 +11,9 @@ After pretraining, we freeze the encoder and train a linear classifier on labele
 
 Our results show that:
 
-- SSL approaches outperform fully supervised models.
+- SSL approaches outperform fully supervised models, with SimCLR achieving an F1-score of 56%, and BYOL obtained 47%, demonstrating competitive results against the Supervised benchmark of 53%. 
 
-- SimCLR achieves the best performance, especially when paired with the attention layer.
+- SimCLR achieves the best performance, especially when paired with the attention layer, showing a 5% increase.
 
 - Models remain robust even when the available pool of training data is reduced, improving annotation efforts.
 
